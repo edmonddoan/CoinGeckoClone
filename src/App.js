@@ -1,25 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CryptoList from './CryptoList';
-import CryptoDetailPage from './CryptoDetailPage'; // Adjust the path as necessary
+import CryptoList from './CryptoList'; // Adjust the path as necessary
+import Header from './Header';
+import Footer from './Footer';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          {/* Your header content */}
-        </header>
-        <Routes>
-          <Route path="/" element={<CryptoList />} />
-          <Route path="/crypto/:id" element={<CryptoDetailPage />} />
-        </Routes>
-        <footer className="App-footer">
-          {/* Your footer content */}
-        </footer>
-      </div>
-    </Router>
+    <div className="App">
+        <Header />
+      <main>
+        <CryptoList />
+      </main>
+      <Footer />
+    </div>
   );
-};
+}
 
 export default App;

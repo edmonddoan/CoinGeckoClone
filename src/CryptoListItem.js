@@ -2,9 +2,9 @@ import React from 'react';
 
 const CryptoListItem = ({ crypto }) => {
   return (
-    <div>
+    <div className='crypto-item'>
       <h3>{crypto.name}</h3>
-      <p>Price: ${crypto.current_price}</p>
+      <p>Price: ${crypto.quote.USD.price.toFixed(2)}</p>
       {/* Add more cryptocurrency details as needed */}
     </div>
   );

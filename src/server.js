@@ -13,7 +13,7 @@ app.get('/api/cryptocurrencies', async (req, res) => {
         const url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
         const response = await fetch(url, {
             headers: {
-                'X-CMC_PRO_API_KEY': '' // Replace with your actual API key
+                'X-CMC_PRO_API_KEY': 'API_KEY' // Replace with your actual API key
             }
         });
         const data = await response.json();
